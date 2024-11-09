@@ -1,0 +1,42 @@
+.lock-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.dashed-circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 10px dashed #5ec6ff;
+    border-radius: 50%;
+    animation: spin 4s linear infinite; /* Looping animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lock-icon {
+    font-size: 100px;
+    color: #5ec6ff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#lock-icon.lock-open {
+    color: #49a1e1;
+    transform: rotate(-20deg);
+}
+
+/* Spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
